@@ -1,6 +1,5 @@
 import Dygraphs from './components/Dygraphs.vue'
-import mixins from './mixins/mixins.js'
-
+import DygraphsApi from 'dygraphs'
 // Install the components
 export function install (Vue) {
   Vue.component('dygraphs', Dygraphs)
@@ -10,7 +9,7 @@ export function install (Vue) {
 // Expose the components
 export {
   Dygraphs,
-  mixins
+  DygraphsApi
   /* -- Add more components here -- */
 }
 
