@@ -1,7 +1,7 @@
 {
   "name": "vue-dygraphs",
   "description": "Dygraphs component for Vue.js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": {
     "name": "fzab",
     "email": "florent.zabera@gmail.com"
@@ -9,7 +9,8 @@
   "keywords": [
     "vue",
     "vuejs",
-    "plugin"
+    "plugin",
+    "dygraphs"
   ],
   "license": "MIT",
   "main": "dist/vue-dygraphs.common.js",
