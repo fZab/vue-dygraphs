@@ -8,7 +8,7 @@ export default {
         attrs: {
           id: 'vue-dygraphs' + this._uid,
         },
-        style: this.style
+        style: this.graphStyle,
       },
     )
   },
@@ -23,11 +23,13 @@ export default {
     },
     graphOptions: {
     },
-    style: {
+    graphStyle: {
       type: Object,
-      default: {
-        width: '100%',
-        height: '500px',
+      default () {
+        return {
+          width: '100%',
+          height: '500px',
+        }
       },
     },
     interactionModel: {
@@ -46,7 +48,7 @@ export default {
       type: Function,
       default: null,
     },
-    pointClickCallback : {
+    pointClickCallback: {
       type: Function,
       default: null,
     },
@@ -72,12 +74,12 @@ export default {
     },
   },
   created () {
-    //override callback options
+    // override callback options
     this.graphOptions.clickCallback = this.clickCallback
     this.graphOptions.drawCallback = this.drawCallback
     this.graphOptions.highlightCallback = this.highlightCallback
-    this.graphOptions.pointClickCallback  = this.pointClickCallback
-    this.graphOptions.underlayCallback  = this.underlayCallback
+    this.graphOptions.pointClickCallback = this.pointClickCallback
+    this.graphOptions.underlayCallback = this.underlayCallback
     this.graphOptions.unhighlightCallback = this.unhighlightCallback
     this.graphOptions.zoomCallback = this.zoomCallback
     this.graphOptions.drawHighlightPointCallback = this.drawHighlightPointCallback
@@ -86,7 +88,7 @@ export default {
   },
   mounted () {
     this.renderGraph(this.graphData, this.graphOptions)
-	},
+  },
   methods: {
     renderGraph (data, options) {
       this.$data._graph = new Dygraphs('vue-dygraphs' + this._uid, data, options)

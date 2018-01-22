@@ -9,7 +9,7 @@ export function install (Vue) {
 // Expose the components
 export {
   Dygraphs,
-  DygraphsApi
+  DygraphsApi,
   /* -- Add more components here -- */
 }
 
