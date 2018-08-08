@@ -99,7 +99,7 @@ export default {
       // Merge data and options
       let obj = Object.assign({}, this.graphOptions, {file: this.graphData})
       this.$data._graph.updateOptions(obj)
-    }
+    },
   },
   watch: {
     'graphData': {
@@ -120,10 +120,8 @@ export default {
             this.waitingForUpdate = true
           }
         }
-        
         if (!this.waitingForUpdate) {
-          this.$data._graph.updateOptions({file: 
-          val})
+          this.$data._graph.updateOptions({file: val})
         }
       },
     },
